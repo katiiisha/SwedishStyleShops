@@ -598,6 +598,151 @@
   margin: 100px 100px 133px 100px;
 }
 
+.wrapper-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-menu .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wrapper-menu .logo img {
+  width: 60px;
+}
+.wrapper-menu .logo .logo_text {
+  color: rgb(53, 53, 53);
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  cursor: pointer;
+}
+.wrapper-menu .menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+.wrapper-menu .menu .menu_item {
+  color: rgb(53, 53, 53);
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.catalog-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+}
+.catalog-menu .tabs-nav {
+  margin-bottom: 50px;
+}
+.catalog-menu .tabs-nav .tabs-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 23px;
+}
+.catalog-menu .tabs-nav .tabs-list .tabs-list_link {
+  border-radius: 5px;
+  background: rgb(134, 153, 195);
+  padding: 15px 22px 15px 22px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+.catalog-menu .tabs-nav .tabs-list .tabs-list_link__active {
+  background-color: rgb(41, 69, 100);
+}
+.catalog-menu .all-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+}
+.catalog-menu .all-catalog .wrapper-card-product {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-menu .all-catalog .wrapper-card-product .card-product {
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  padding: 50px;
+  background-image: url(../img/catalogPage/catalog-menu/cardBorder.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.catalog-menu .all-catalog .wrapper-card-product .card-product img {
+  height: 100%;
+}
+.catalog-menu .all-catalog .wrapper-card-product .card-product_title {
+  color: rgb(0, 0, 0);
+  font-family: "Oswald";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+.catalog-menu .all-catalog .wrapper-card-product .card-product_price {
+  color: rgb(0, 0, 0);
+  font-family: "Oswald";
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 36px;
+  letter-spacing: 0;
+  margin: 0;
+}
+.catalog-menu .combination-with-chairs {
+  margin: 100px 0 63px 0;
+}
+.catalog-menu .combination-with-chairs .combination-with-chairs_img {
+  width: 100%;
+}
+.catalog-menu .combination-with-chairs .combination-with-chairs_title {
+  color: rgb(53, 53, 53);
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+.catalog-menu .catalog-menu_btn {
+  width: 310px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgb(41, 69, 100);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  border: none;
+  font-family: "Arial";
+  letter-spacing: 5%;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
 * {
   box-sizing: border-box;
 }
