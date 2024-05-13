@@ -42,7 +42,17 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-        cursor: pointer;
+
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
       }
     }
   }

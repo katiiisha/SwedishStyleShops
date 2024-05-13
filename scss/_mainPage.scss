@@ -38,11 +38,20 @@
       justify-content: space-between;
 
       .menu_item {
-        @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
         list-style-type: none;
         display: flex;
         align-items: center;
-        cursor: pointer;
+        // cursor: pointer;
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
       }
     }
   }
@@ -432,6 +441,7 @@
         24px
       );
       align-self: flex-end;
+      margin-bottom: 50px;
     }
   }
 }

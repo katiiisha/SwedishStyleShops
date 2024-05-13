@@ -43,6 +43,16 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
       }
     }
   }
@@ -68,7 +78,7 @@
 }
 .faq {
   .wrapper-faq {
-    padding: 100px;
+    padding: 100px 100px 0 100px;
     display: flex;
     gap: 50px;
     flex-direction: column;
@@ -81,11 +91,19 @@
         gap: 20px;
         .faq-list_question {
           display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
           border-radius: 20px;
           background: rgb(134, 153, 195);
+          background-image: url(../img/fqaPage/frame.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 90%;
           padding: 50px;
           width: 626px;
           height: 328px;
+
           @include fontDesigner(
             rgb(255, 255, 255),
             'Arial',
@@ -113,6 +131,26 @@
             font-weight: 700;
             font-style: italic;
           }
+        }
+      }
+    }
+    .wrapper-link-email {
+      padding: 69px;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../img/fqaPage/frame_black.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      align-self: flex-end;
+      .link-email {
+        text-decoration: none;
+
+        @include fontDesigner(rgb(41, 69, 100), 'Arial', 20px, 400, 25px, 2px);
+        .link-email_accent {
+          font-weight: 700;
         }
       }
     }
