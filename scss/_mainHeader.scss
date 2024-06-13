@@ -1,0 +1,153 @@
+.main-header {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  height: 100vh;
+
+  background-position: center;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  .wrapper-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+    padding: 5px 100px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+        width: 60px;
+      }
+      .logo_text {
+        @include fontDesigner(rgb(53, 53, 53), 'Oswald', 20px, 400, 21px, 0);
+        text-transform: uppercase;
+        font-family: 'Oswald';
+        cursor: pointer;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+      .menu_item {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img {
+          height: 30px;
+        }
+        .menu_link {
+          text-decoration: none;
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          &:visited {
+            color: rgb(53, 53, 53);
+          }
+          &:hover {
+            color: rgb(41, 69, 100);
+          }
+        }
+      }
+    }
+    .menu-burger {
+      display: none;
+    }
+  }
+  .wrapper-slogan {
+    padding: 10px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin: auto 0;
+    .slogan {
+      @include fontDesigner(rgb(41, 69, 100), 'Oswald', 80px, 400, 85px, 0);
+      margin: 0;
+    }
+    .slogan_btn {
+      @include btn(
+        310px,
+        60px,
+        10px,
+        rgb(41, 69, 100),
+        rgb(255, 255, 255),
+        24px
+      );
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .main-header {
+    background-position: center top;
+
+    gap: 95px;
+    .wrapper-menu {
+      padding: 5px 50px;
+      .menu {
+        gap: 30px;
+      }
+    }
+    .wrapper-slogan {
+      padding: 10px 50px;
+      gap: 50px;
+      .slogan_btn {
+        width: 280px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .main-header {
+    .logo {
+      img {
+        width: 50px;
+      }
+      .logo_text {
+        font-size: 16px;
+      }
+    }
+    .wrapper-menu {
+      .menu {
+        .menu_item {
+          .menu_link {
+            font-size: 16px;
+          }
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+    .wrapper-slogan {
+      .slogan {
+        font-size: 60px;
+        line-height: 65px;
+      }
+      .slogan_btn {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .main-header {
+    .wrapper-menu {
+      .menu-desctop {
+        display: none;
+      }
+      .menu-burger {
+        display: flex;
+      }
+    }
+  }
+}
