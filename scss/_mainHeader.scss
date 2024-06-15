@@ -95,6 +95,7 @@
         .menu_link {
           text-decoration: none;
           @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 600, 36px, 0);
+          // color: red;
           &:visited {
             color: rgb(53, 53, 53);
           }
@@ -127,6 +128,7 @@
         rgb(255, 255, 255),
         24px
       );
+      // background-color: red;
     }
   }
 }

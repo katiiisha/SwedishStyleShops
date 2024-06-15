@@ -432,6 +432,9 @@
     margin: 100px 100px 133px 100px;
   }
 }
+.test {
+  color: red;
+}
 @media (max-width: 1200px) {
   .about-company {
     .wrapper-about-company {
@@ -910,7 +913,7 @@
           display: block;
           position: absolute;
           z-index: -1;
-          left: 50px;
+          left: 11px;
           bottom: -15px;
           height: 109%;
         }

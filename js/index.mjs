@@ -57,7 +57,7 @@ const catalogSwiper = new Swiper('.my-swiper', {
 
 class Cart {
   constructor(openCart, modalCart, closeCart, cards) {
-    this.open = openCart;
+    this.open = [...openCart];
     this.modalCart = modalCart;
     this.close = closeCart;
     this.cardsInfo = cards;
@@ -218,12 +218,14 @@ class Cart {
     });
   }
   openCart() {
-    this.open.addEventListener('click', () => {
-      modalCart.classList.add('modal-shopping-cart__active');
-      bodyScrollLock.disableBodyScroll(modalCart);
-      this.deleteItem();
-      this.changeQuantity();
-      this.calculationAmout();
+    this.open.forEach((cart) => {
+      cart.addEventListener('click', () => {
+        modalCart.classList.add('modal-shopping-cart__active');
+        bodyScrollLock.disableBodyScroll(modalCart);
+        this.deleteItem();
+        this.changeQuantity();
+        this.calculationAmout();
+      });
     });
   }
 }
@@ -334,7 +336,7 @@ const card = new CardModal(
 );
 card.openModal();
 
-const cartLink = document.querySelector('.menu_item__cart');
+const cartLink = document.querySelectorAll('.menu_item__cart');
 const modalCart = document.querySelector('.modal-shopping-cart');
 const closeModalCart = modalCart.querySelector('.shopping-cart_close');
 const cartTexst = new Cart(cartLink, modalCart, closeModalCart, catalogCard);
