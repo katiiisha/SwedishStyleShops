@@ -1,7 +1,3 @@
-// import Swiper from '../node_modules/swiper/swiper-bundle.mjs';
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
-// import { catalogCard } from './cardInfo.mjs';
-
 const catalogCard = [
   {
     name: 'nordvik',
@@ -141,41 +137,6 @@ const catalogCard = [
   },
 ];
 
-// const swiper = new Swiper('.swiper', {
-//   // loop: true,
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   enabled: true,
-
-//   pageUpDown: true,
-//   slidesPerView: 3,
-//   centerSlide: true,
-//   fade: true,
-//   spaceBetween: 25,
-//   breakpoints: {
-//     220: {
-//       slidesPerView: 1,
-//     },
-//     420: {
-//       slidesPerView: 1,
-//     },
-//     // when window width is >= 640px
-//     600: {
-//       slidesPerView: 2,
-//     },
-//     900: {
-//       slidesPerView: 3,
-//     },
-//   },
-// });
-
 class Cart {
   constructor(openCart, modalCart, closeCart, cards) {
     this.open = [...openCart];
@@ -187,8 +148,6 @@ class Cart {
   closeCart() {
     this.close.addEventListener('click', () => {
       modalCart.classList.remove('modal-shopping-cart__active');
-
-      bodyScrollLock.enableBodyScroll(modalCart);
     });
   }
   createCard(card) {
@@ -342,7 +301,7 @@ class Cart {
     this.open.forEach((cart) => {
       cart.addEventListener('click', () => {
         modalCart.classList.add('modal-shopping-cart__active');
-        // bodyScrollLock.disableBodyScroll(modalCart);
+
         this.deleteItem();
         this.changeQuantity();
         this.calculationAmout();
@@ -358,8 +317,6 @@ class CardModal {
     this.slide = document.querySelector('.my-swiper');
     this.catalog = document.querySelector('.all-catalog');
     this.cardsInfo = cards;
-
-    // this.cartArr = [];
   }
   changeInfo(name) {
     let data = this.cardsInfo.find((item) => item.name === name);
@@ -404,8 +361,7 @@ class CardModal {
 
   closeModal(a, withinBoundaries) {
     if (!withinBoundaries && a === false) {
-      this.modal.classList.remove('modal-card-product__active');
-      bodyScrollLock.enableBodyScroll(this.modal);
+      this.modal.classList.remove('mod-card-product__active');
     }
   }
   openModal() {
@@ -413,9 +369,8 @@ class CardModal {
       c.addEventListener('click', (e) => {
         let name = e.target.closest('div').dataset.name;
         this.changeInfo(name);
-        this.modal.classList.add('modal-card-product__active');
+        this.modal.classList.add('mod-card-product__active');
         this.modal.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        bodyScrollLock.disableBodyScroll(this.modal);
 
         document.addEventListener('click', (e) => {
           const withinBoundaries = e.composedPath().includes(this.slide);
@@ -429,7 +384,7 @@ class CardModal {
 
 const card = new CardModal(
   'wrapper-card-product',
-  'modal-card-product ',
+  'mod-card-product',
   catalogCard
 );
 card.openModal();

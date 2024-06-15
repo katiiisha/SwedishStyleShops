@@ -80,351 +80,357 @@
     align-self: flex-end;
   }
 }
-.modal-card-product {
+.mod-card-product {
+  background-color: rgba(255, 255, 255, 0.504);
+  border: 1px solid red;
   display: none;
-  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   left: 0;
+  top: 0;
   right: 0;
-  top: 130%;
+  bottom: 0;
+  z-index: 3;
+  border-radius: 5px;
+  .wrapper-mod-card-product {
+    // position: absolute;
+    // margin: auto;
+    // left: 50%;
+    // top: 50%;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
 
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(255, 255, 255, 0.5);
-  .product-description {
-    margin-top: 10vh;
-    .my-swiper {
-      width: 90%;
-      background-color: #fff;
-      .my-swiper-wrapper {
-        width: 80%;
-        .swiper-slide {
-          height: 80vh;
-          padding-right: 60px;
-          padding-left: 60px;
-        }
-        .slide-prev {
-          .inner-slide-prev {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            background-repeat: no-repeat;
-            background-size: contain;
-            gap: 40px;
+    .slide-prev {
+      .slide-prev-btn {
+        z-index: 2;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        position: fixed;
+      }
+      .inner-slide-prev {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-repeat: no-repeat;
+        background-size: contain;
+        gap: 40px;
+        position: relative;
+        .advantages-list {
+          position: relative;
+          z-index: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 50px;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          height: max-content;
+          @include fontDesigner(rgb(0, 0, 0), 'Arial', 20px, 400, 30px, 0);
+          .advantages-item {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            text-align: end;
             position: relative;
-            .advantages-list {
-              position: relative;
-              z-index: 0;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              gap: 50px;
-              list-style-type: none;
-              padding: 0;
+            .advantages-item_text {
+              width: 268px;
               margin: 0;
-              height: max-content;
-              @include fontDesigner(rgb(0, 0, 0), 'Arial', 20px, 400, 30px, 0);
-              .advantages-item {
-                display: flex;
-                align-items: center;
-                gap: 13px;
-                text-align: end;
-                position: relative;
-                .advantages-item_text {
-                  width: 268px;
-                  margin: 0;
-                }
-                .advantages-item_sqr {
-                  width: 20px;
-                  height: 20px;
-                  border-radius: 50%;
-                  background: rgb(255, 241, 177);
-                }
-
-                &:first-child {
-                  margin-top: 85px;
-                }
-              }
-              &::after {
-                content: '';
-                height: 92%;
-                width: 2px;
-                position: absolute;
-                background-color: black;
-                z-index: -1;
-                right: 9px;
-              }
             }
-            .product-desc {
-              padding-top: 100px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              gap: 80px;
-              .product-img {
-                display: flex;
-                gap: 50px;
-                margin: 0;
-                img {
-                  width: 200px;
-                  height: 200px;
-                }
-              }
-              .desc-list {
-                padding: 0;
-                list-style-type: none;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                .desc-item {
-                  display: flex;
-                  justify-content: flex-end;
-                  gap: 15px;
-                  @include fontDesigner(
-                    rgb(53, 53, 53),
-                    'Arial',
-                    20px,
-                    100,
-                    25px,
-                    0
-                  );
-                  .desc-item_text {
-                    width: 70px;
-                    text-align: end;
-                    font-weight: 100;
-                  }
-                  &.desc-item-cart {
-                    cursor: pointer;
-                  }
-                }
-                .desc-item__title {
-                  @include fontDesigner(
-                    rgb(53, 53, 53),
-                    'Oswald',
-                    50px,
-                    300,
-                    50px,
-                    0
-                  );
-                }
-                .desc-item__color {
-                  display: flex;
-                  align-items: center;
-                  gap: 15px;
-                  .desc-item_color {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    border: 0.5px solid rgb(53, 53, 53);
-                  }
-                  .desc-item_color_black {
-                    background: rgb(0, 0, 0);
-                  }
-                  .desc-item_color_brown {
-                    background-color: rgb(168, 134, 87);
-                  }
-                  .desc-item_color_brown-white {
-                    background: linear-gradient(
-                      90deg,
-                      rgb(168, 134, 87) 50%,
-                      rgb(255, 255, 255) 50%
-                    );
-                  }
-                  .desc-item_color_brown-black {
-                    background: linear-gradient(
-                      90deg,
-                      rgb(168, 134, 87) 50%,
-                      rgb(0, 0, 0) 50%
-                    );
-                  }
-                  .desc-item_color__active {
-                    width: 40px;
-                    height: 40px;
-                  }
-                }
-              }
+            .advantages-item_sqr {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: rgb(255, 241, 177);
+            }
+
+            &:first-child {
+              margin-top: 85px;
             }
           }
+          &::after {
+            content: '';
+            height: 92%;
+            width: 2px;
+            position: absolute;
+            background-color: black;
+            z-index: -1;
+            right: 9px;
+          }
         }
-        .slide-characteristic {
-          .inner-slide-characteristic {
+        .product-desc {
+          padding-top: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 80px;
+          .product-img {
+            display: flex;
+            gap: 50px;
+            margin: 0;
+            img {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          .desc-list {
+            padding: 0;
+            list-style-type: none;
             display: flex;
             flex-direction: column;
-            gap: 20px 50px;
-
-            .slide-characteristic_title {
-              margin: 0;
+            gap: 20px;
+            .desc-item {
+              display: flex;
+              justify-content: flex-end;
+              gap: 15px;
               @include fontDesigner(
-                rgb(41, 69, 100),
+                rgb(53, 53, 53),
+                'Arial',
+                20px,
+                100,
+                25px,
+                0
+              );
+              .desc-item_text {
+                width: 70px;
+                text-align: end;
+                font-weight: 100;
+              }
+              &.desc-item-cart {
+                cursor: pointer;
+              }
+            }
+            .desc-item__title {
+              @include fontDesigner(
+                rgb(53, 53, 53),
                 'Oswald',
                 50px,
-                400,
+                300,
                 50px,
                 0
               );
             }
-            .wrapper-characteristic {
+            .desc-item__color {
               display: flex;
-              gap: 30px;
-              .wrapper-characteristic-column {
-                width: 48%;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                .characteristic {
-                  display: flex;
-                  flex-direction: column;
-
-                  height: max-content;
-                  border-radius: 10px;
-                  background: rgb(255, 239, 166);
-                  padding: 20px;
-                  .characteristic_title {
-                    margin: 0;
-                    @include fontDesigner(
-                      rgb(0, 0, 0),
-                      'Oswald',
-                      36px,
-                      400,
-                      36px,
-                      5px
-                    );
-                  }
-                  .characteristic_list {
-                    gap: 5px;
-                    display: flex;
-                    flex-direction: column;
-                    list-style-type: none;
-                    padding: 0;
-                    .characteristic_item {
-                      display: flex;
-                      justify-content: space-between;
-                      .characteristic_text {
-                        @include fontDesigner(
-                          rgb(0, 0, 0),
-                          'Arial',
-                          18px,
-                          400,
-                          18px,
-                          0
-                        );
-                      }
-                      .characteristic_text__accent {
-                        font-weight: 700;
-                      }
-                    }
-                    .characteristic_item__column {
-                      flex-direction: column;
-                    }
-                  }
-                }
+              align-items: center;
+              gap: 15px;
+              .desc-item_color {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 0.5px solid rgb(53, 53, 53);
               }
-            }
-          }
-        }
-        .slide-size {
-          display: flex;
-          align-items: center;
-          video {
-            width: 500px;
-            height: 500px;
-          }
-          .chair-size {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            height: 500px;
-            .chair-size-img {
-              width: 470px;
-            }
-            .chair-size_title {
-              @include fontDesigner(
-                rgb(41, 69, 100),
-                'Oswald',
-                50px,
-                400,
-                50px,
-                3px
-              );
-            }
-          }
-        }
-        .slide-infa {
-          .inner-infa {
-            position: relative;
-
-            background-image: url(../img/catalogPage/cardProduct/bg-slide.png);
-            background-size: contain;
-            height: 100%;
-            .list-infa {
-              display: flex;
-              flex-direction: column;
-              gap: 50px;
-              list-style-type: none;
-              padding: 0;
-              margin: 0;
-              margin-left: 100px;
-              .item-infa {
-                display: flex;
-                align-items: center;
-                gap: 13px;
-
-                .item-infa_sqr {
-                  width: 20px;
-                  height: 20px;
-                  border-radius: 50%;
-                  background: rgb(255, 241, 177);
-                }
-                .item-infa_title {
-                  display: flex;
-                  flex-direction: column;
-                  margin: 0;
-                  @include fontDesigner(
-                    rgb(41, 69, 100),
-                    'Oswald',
-                    30px,
-                    400,
-                    30px,
-                    0
-                  );
-                  .item-infa_text {
-                    margin: 0;
-                    @include fontDesigner(
-                      rgb(0, 0, 0),
-                      'Arial',
-                      20px,
-                      400,
-                      30px,
-                      0
-                    );
-                  }
-                }
-                &:first-child {
-                  margin-top: 85px;
-                }
+              .desc-item_color_black {
+                background: rgb(0, 0, 0);
               }
-              &::after {
-                content: '';
-                height: 69%;
-                width: 2px;
-                position: absolute;
-                background-color: black;
-                z-index: -1;
-                left: 109px;
+              .desc-item_color_brown {
+                background-color: rgb(168, 134, 87);
+              }
+              .desc-item_color_brown-white {
+                background: linear-gradient(
+                  90deg,
+                  rgb(168, 134, 87) 50%,
+                  rgb(255, 255, 255) 50%
+                );
+              }
+              .desc-item_color_brown-black {
+                background: linear-gradient(
+                  90deg,
+                  rgb(168, 134, 87) 50%,
+                  rgb(0, 0, 0) 50%
+                );
+              }
+              .desc-item_color__active {
+                width: 40px;
+                height: 40px;
               }
             }
           }
         }
       }
-      .swiper-button-prev,
-      .swiper-button-next,
-      .swiper-pagination-bullet-active {
-        color: rgb(0, 0, 0);
+    }
+    .slide-characteristic {
+      .inner-slide-characteristic {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 50px;
+
+        .slide-characteristic_title {
+          margin: 0;
+          @include fontDesigner(rgb(41, 69, 100), 'Oswald', 50px, 400, 50px, 0);
+        }
+        .wrapper-characteristic {
+          display: flex;
+          gap: 30px;
+          .wrapper-characteristic-column {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .characteristic {
+              display: flex;
+              flex-direction: column;
+
+              height: max-content;
+              border-radius: 10px;
+              background: rgb(255, 239, 166);
+              padding: 20px;
+              .characteristic_title {
+                margin: 0;
+                @include fontDesigner(
+                  rgb(0, 0, 0),
+                  'Oswald',
+                  36px,
+                  400,
+                  36px,
+                  5px
+                );
+              }
+              .characteristic_list {
+                gap: 5px;
+                display: flex;
+                flex-direction: column;
+                list-style-type: none;
+                padding: 0;
+                .characteristic_item {
+                  display: flex;
+                  justify-content: space-between;
+                  .characteristic_text {
+                    @include fontDesigner(
+                      rgb(0, 0, 0),
+                      'Arial',
+                      18px,
+                      400,
+                      18px,
+                      0
+                    );
+                  }
+                  .characteristic_text__accent {
+                    font-weight: 700;
+                  }
+                }
+                .characteristic_item__column {
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slide-size {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      video {
+        width: 500px;
+        height: 500px;
+      }
+      .chair-size {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        height: 500px;
+        .chair-size-img {
+          width: 470px;
+        }
+        .chair-size_title {
+          @include fontDesigner(
+            rgb(41, 69, 100),
+            'Oswald',
+            50px,
+            400,
+            50px,
+            3px
+          );
+        }
+      }
+    }
+    .slide-infa {
+      .inner-infa {
+        position: relative;
+
+        background-image: url(../img/catalogPage/cardProduct/bg-slide.png);
+        background-size: contain;
+        height: 100%;
+        .list-infa {
+          position: relative;
+          z-index: 1;
+
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          margin-left: 100px;
+          .item-infa {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            .item-infa_sqr {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: rgb(255, 241, 177);
+            }
+            .item-infa_title {
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+              @include fontDesigner(
+                rgb(41, 69, 100),
+                'Oswald',
+                30px,
+                400,
+                30px,
+                0
+              );
+              .item-infa_text {
+                margin: 0;
+                @include fontDesigner(
+                  rgb(0, 0, 0),
+                  'Arial',
+                  20px,
+                  400,
+                  30px,
+                  0
+                );
+              }
+            }
+            &:first-child {
+              margin-top: 85px;
+            }
+          }
+          &::after {
+            content: '';
+            height: 77%;
+            width: 2px;
+            position: absolute;
+            background-color: black;
+            z-index: -1;
+            left: 9px;
+            top: 80px;
+          }
+        }
       }
     }
   }
 }
-.modal-card-product__active {
-  display: block;
+.mod-card-product__active {
+  display: flex;
 }
+
 .links-shops {
   .wrapper-links-shops {
     display: flex;
