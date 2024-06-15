@@ -141,59 +141,40 @@ const catalogCard = [
   },
 ];
 
-const swiper = new Swiper('.swiper', {
-  // loop: true,
+// const swiper = new Swiper('.swiper', {
+//   // loop: true,
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  enabled: true,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   enabled: true,
 
-  pageUpDown: true,
-  slidesPerView: 3,
-  centerSlide: true,
-  fade: true,
-  spaceBetween: 25,
-  breakpoints: {
-    220: {
-      slidesPerView: 1,
-    },
-    420: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 640px
-    600: {
-      slidesPerView: 2,
-    },
-    900: {
-      slidesPerView: 3,
-    },
-  },
-});
-const catalogSwiper = new Swiper('.my-swiper', {
-  // loop: true,
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  enabled: true,
-  pageUpDown: true,
-  slidesPerView: 1,
-  centerSlide: true,
-  fade: true,
-  spaceBetween: 25,
-  // grabCursor: true,
-});
+//   pageUpDown: true,
+//   slidesPerView: 3,
+//   centerSlide: true,
+//   fade: true,
+//   spaceBetween: 25,
+//   breakpoints: {
+//     220: {
+//       slidesPerView: 1,
+//     },
+//     420: {
+//       slidesPerView: 1,
+//     },
+//     // when window width is >= 640px
+//     600: {
+//       slidesPerView: 2,
+//     },
+//     900: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
 
 class Cart {
   constructor(openCart, modalCart, closeCart, cards) {
@@ -445,6 +426,32 @@ class CardModal {
     });
   }
 }
+
+const card = new CardModal(
+  'wrapper-card-product',
+  'modal-card-product ',
+  catalogCard
+);
+card.openModal();
+
+const cartLink = document.querySelectorAll('.menu_item__cart');
+const modalCart = document.querySelector('.modal-shopping-cart');
+console.log(modalCart);
+const closeModalCart = modalCart.querySelector('.shopping-cart_close');
+const cartTexst = new Cart(cartLink, modalCart, closeModalCart, catalogCard);
+cartTexst.openCart();
+cartTexst.closeCart();
+
+if (document.querySelector('.desc-item-cart')) {
+  document.querySelector('.desc-item-cart').addEventListener('click', (e) => {
+    let product = e.target
+      .closest('.desc-list')
+      .querySelector('.desc-item__title')
+      .textContent.toLowerCase();
+
+    cartTexst.addProduct(product);
+  });
+}
 class burgerMenu {
   constructor(menu, activeClass) {
     this.menu = menu;
@@ -469,27 +476,3 @@ document.querySelector('.menu_item__menu').addEventListener('click', () => {
 document.querySelector('.menu-burger-btn').addEventListener('click', () => {
   modalBurgerMenu.close();
 });
-const card = new CardModal(
-  'wrapper-card-product',
-  'modal-card-product ',
-  catalogCard
-);
-card.openModal();
-
-const cartLink = document.querySelectorAll('.menu_item__cart');
-const modalCart = document.querySelector('.modal-shopping-cart');
-const closeModalCart = modalCart.querySelector('.shopping-cart_close');
-const cartTexst = new Cart(cartLink, modalCart, closeModalCart, catalogCard);
-cartTexst.openCart();
-cartTexst.closeCart();
-
-if (document.querySelector('.desc-item-cart')) {
-  document.querySelector('.desc-item-cart').addEventListener('click', (e) => {
-    let product = e.target
-      .closest('.desc-list')
-      .querySelector('.desc-item__title')
-      .textContent.toLowerCase();
-
-    cartTexst.addProduct(product);
-  });
-}
