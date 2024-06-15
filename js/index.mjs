@@ -221,7 +221,7 @@ class Cart {
     this.open.forEach((cart) => {
       cart.addEventListener('click', () => {
         modalCart.classList.add('modal-shopping-cart__active');
-        bodyScrollLock.disableBodyScroll(modalCart);
+        // bodyScrollLock.disableBodyScroll(modalCart);
         this.deleteItem();
         this.changeQuantity();
         this.calculationAmout();
