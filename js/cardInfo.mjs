@@ -1,4 +1,4 @@
-export const catalogCard = [
+const catalogCard = [
   {
     name: 'nordvik',
     title: 'стул нордвик',
