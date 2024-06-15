@@ -450,6 +450,91 @@
     }
   }
 }
+@media (max-width: 1100px) {
+  .mod-card-product {
+    .wrapper-mod-card-product {
+      padding: 21px;
+      box-sizing: content-box;
+      max-width: 480px;
+      .slide-prev {
+        .inner-slide-prev {
+          background-color: #fff;
+          display: flex;
+          .product-desc {
+            gap: 0;
+            align-items: flex-start;
+            background-color: #fff;
+            .desc-list {
+              .desc-item {
+                flex-direction: row-reverse;
+                .desc-item_text {
+                  text-align: left;
+                }
+                .desc-item_price {
+                  font-weight: 600;
+                }
+              }
+              .desc-item-cart {
+                position: absolute;
+                bottom: 13px;
+                /* left: 0; */
+                right: 22px;
+              }
+              .desc-item__color {
+                flex-direction: row-reverse;
+              }
+            }
+          }
+          .advantages-list {
+            display: none;
+          }
+        }
+      }
+      .slide-characteristic {
+        .inner-slide-characteristic {
+          .wrapper-characteristic {
+            gap: 0;
+            flex-direction: column;
+            .wrapper-characteristic-column {
+              border-radius: 10px;
+              gap: 0;
+              width: 100%;
+              background: rgb(255, 239, 166);
+              &:last-child {
+                border-top: none;
+              }
+            }
+          }
+        }
+      }
+      .slide-infa {
+        margin-top: 42px;
+        .inner-infa {
+          height: auto;
+          background-image: none;
+          .list-infa {
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #ffefa6;
+            margin: 0;
+            gap: 10px;
+            .item-infa {
+              .item-infa_sqr {
+                display: none;
+              }
+              &:first-child {
+                margin: 0;
+              }
+            }
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1200px) {
   .catalog-page {
     gap: 55px;
