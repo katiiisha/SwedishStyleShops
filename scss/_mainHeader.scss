@@ -8,6 +8,52 @@
   background-size: cover;
 
   background-repeat: no-repeat;
+  .wrapper-menu-burger {
+    display: none;
+    justify-content: flex-end;
+    padding: 50px;
+    top: 0;
+    height: 100vh;
+    background-color: #8699c3;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+
+    .menu-burger-btn {
+      cursor: pointer;
+      position: absolute;
+      left: 25px;
+      height: 35px;
+      background-color: transparent;
+      border: none;
+    }
+    .menu-burger-link {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      .burger-link_item {
+        text-align: end;
+        .burger_link {
+          text-decoration: none;
+          @include fontDesigner(
+            rgb(255, 255, 255),
+            'Oswald',
+            32px,
+            400,
+            32px,
+            0
+          );
+        }
+      }
+    }
+  }
+  .wrapper-menu-burger__active {
+    display: flex;
+  }
   .wrapper-menu {
     display: flex;
     align-items: center;
@@ -147,6 +193,16 @@
       }
       .menu-burger {
         display: flex;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .main-header {
+    .wrapper-slogan {
+      padding: 10px 30px;
+      .slogan {
+        font-size: clamp(38px, 10vw, 50px);
       }
     }
   }

@@ -4,6 +4,7 @@
 .modal-shopping-cart {
   display: none;
   .wrapper-shopping-cart {
+    z-index: 3;
     height: 100vh;
     overflow: scroll;
     background-color: #fff;
@@ -317,7 +318,7 @@
       overflow: hidden;
       .swiper-slide {
         width: 300px;
-        height: 300px;
+        // height: 300px;
         padding: 24px;
         border-radius: 5px;
         background: rgb(255, 239, 166);
@@ -474,6 +475,129 @@
     }
     .message-feedback__active {
       display: flex;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .faq {
+    .wrapper-faq {
+      padding: 50px 50px 0 50px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .faq {
+    .wrapper-faq {
+      .inner-faq {
+        .faq-list {
+          .faq-list_question {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          .faq-list_answer {
+            font-style: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .faq {
+    .wrapper-faq {
+      .inner-faq {
+        .faq-list {
+          flex-direction: column;
+          .faq-list_question {
+            height: auto;
+            background-image: none;
+            width: 100%;
+          }
+          .faq-list_answer {
+            width: 100%;
+            padding: 25px;
+          }
+        }
+      }
+      .wrapper-link-email {
+        padding: 45px;
+      }
+    }
+  }
+  .customer-reviews-faq {
+    .swiper {
+      padding: 30px;
+      .my-swiper-wrapper {
+        .swiper-slide {
+          .subtitle {
+            font-size: 30px;
+            line-height: 30px;
+          }
+          .title {
+            width: 70px;
+            height: 70px;
+          }
+          .text {
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .feedback {
+      .feedback-btn {
+        width: 270px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .faq {
+    .wrapper-faq {
+      padding: 30px 30px 0 30px;
+      .inner-faq {
+        .faq-list {
+          .faq-list_question {
+            background-image: url(../img/fqaPage/frameMin.svg);
+            background-size: auto;
+            height: 150px;
+          }
+          .faq-list_answer {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+      .wrapper-link-email {
+        .link-email {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 470px) {
+  .faq {
+    .wrapper-faq {
+      .inner-faq {
+        .faq-list {
+          .faq-list_question {
+            background-size: 91%;
+          }
+        }
+      }
+    }
+  }
+  .customer-reviews-faq {
+    .feedback {
+      .feedback-btn {
+        margin: auto;
+      }
     }
   }
 }

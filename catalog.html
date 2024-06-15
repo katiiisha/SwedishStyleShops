@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
     <title>Каталог</title>
-    <script type="module" src="js/index.mjs "></script>
     <script src="node_modules/body-scroll-lock/lib/bodyScrollLock.js"></script>
   </head>
   <body>
@@ -19,7 +18,7 @@
             STYLE
           </span>
         </div>
-        <ul class="menu">
+        <ul class="menu menu-desctop">
           <li class="menu_item">
             <a href="index.html" class="menu_link">Главная</a>
           </li>
@@ -39,6 +38,14 @@
           </li>
           <li class="menu_item menu_item__cart">
             <img src="img/icon/cart.svg" alt="Корзина покупок" />
+          </li>
+        </ul>
+         <ul class="menu menu-burger">
+          <li class="menu_item menu_item__cart">
+            <img src="img/icon/cart.svg" alt="Корзина покупок" />
+          </li>
+          <li class="menu_item">
+            <img src="img/mainPage/burger-menu.svg" alt="" />
           </li>
         </ul>
       </nav>
@@ -564,22 +571,22 @@
       <div class="wrapper-links-shops">
         <a href="#" class="links-shops_link">
           <img
-            src="img/catalogPage/linkShop/wb.png"
+            src="img/catalogPage/linkShop/wb.svg"
             alt="Ссылка на Вайлдбериз"
           />
         </a>
         <a href="#" class="links-shops_link">
-          <img src="img/catalogPage/linkShop/ozon.png" alt="Ссылка на Озон" />
+          <img src="img/catalogPage/linkShop/ozon.svg" alt="Ссылка на Озон" />
         </a>
         <a href="#" class="links-shops_link">
           <img
-            src="img/catalogPage/linkShop/yandex.png"
+            src="img/catalogPage/linkShop/yandex.svg"
             alt="Ссылка на Яндекс-Маркет"
           />
         </a>
         <a href="#" class="links-shops_link">
           <img
-            src="img/catalogPage/linkShop/sber.png"
+            src="img/catalogPage/linkShop/sber.svg"
             alt="Ссылка на Сбер-Маркет"
           />
         </a>
@@ -634,5 +641,7 @@
         ИП&nbsp;Романов&nbsp;Никита&nbsp;Дмитриевич 322530000011161
       </p>
     </footer>
+    <script type="module" src="js/index.mjs "></script>
+    <script src="js/catalog.js"></script>
   </body>
 </html>

@@ -22,9 +22,11 @@
         left: -35px;
         bottom: 0px;
       }
-      .wrapper-about_lamp__tablet {
+      .wrapper-about_lamp__tablet,
+      .wrapper-about_lamp__phone {
         display: none;
       }
+
       .about-company_title {
         @include fontDesigner(
           rgb(41, 69, 100),
@@ -688,6 +690,291 @@
       .menu-desctop {
         display: none;
       }
+    }
+  }
+  .about-company {
+    .wrapper-about-company {
+      // flex-direction: column;
+      .wrapper-about_wrapper-title {
+        .about-company_title {
+          font-size: 59px;
+          line-height: 59px;
+        }
+      }
+    }
+  }
+  .footer-main {
+    .footer-main_list {
+      gap: 25px;
+      height: auto;
+      flex-direction: column;
+      .footer-main_item {
+        flex: auto;
+        height: 320px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .about-company {
+    .wrapper-about-company {
+      gap: 20px;
+      .wrapper-about_wrapper-title {
+        .about-company_title {
+          font-size: clamp(38px, 10vw, 50px);
+          line-height: clamp(38px, 10vw, 50px);
+        }
+        .wrapper-about_lamp__tablet {
+          height: 104%;
+        }
+      }
+      .about-company_description {
+        .about-company_text {
+          font-size: 16px;
+          line-height: 25px;
+        }
+        .about-company_btn {
+          width: 197px;
+          height: 37px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .catalog-preview {
+    .catalog-preview_chair {
+      // display: flex;
+      // flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, max-content);
+      .chair {
+        img {
+          height: auto;
+        }
+      }
+      .catalog-preview_chair__first {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+      .catalog-preview_chair__second {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      .catalog-preview_chair__third {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+    }
+  }
+  .advantages {
+    .advantages-wrapper {
+      .advantages_title {
+        font-size: clamp(38px, 10vw, 50px);
+        line-height: clamp(38px, 10vw, 50px);
+      }
+      .advantages_list {
+        height: max-content;
+        flex-wrap: nowrap;
+        .advantages_item {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .materials {
+    .materials-wrapper {
+      .materials_list {
+        grid-template-columns: 1fr;
+        .materials_item {
+          width: 258px;
+          height: 367px;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .perfect-decor {
+    .wrapper-perfect-decor {
+      .perfect-decor_title {
+        font-size: clamp(38px, 10vw, 50px);
+        line-height: clamp(38px, 10vw, 50px);
+      }
+    }
+  }
+  .catalog-preview-second {
+    .catalog-preview-second_chair {
+      // display: flex;
+      // flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, max-content);
+      .chair {
+        img {
+          height: auto;
+        }
+      }
+      .chair_first {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+      .chair_second {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+      .chair_third {
+        grid-column: 1 / 2;
+
+        grid-row: 2 / 3;
+      }
+    }
+  }
+  .catalog {
+    .wrapper-catalog {
+      .catalog_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .catalog_title {
+        margin-bottom: 25px;
+        img {
+          display: none;
+        }
+        .catalog_text {
+          font-size: clamp(38px, 10vw, 50px);
+          line-height: clamp(38px, 10vw, 50px);
+        }
+      }
+    }
+  }
+  .customer-reviews {
+    .customer-reviews-wrapper {
+      .customer-reviews_list {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .about-company {
+    .wrapper-about-company {
+      flex-direction: column;
+      gap: 0;
+      justify-content: center;
+
+      .about-company_description {
+        width: auto;
+      }
+    }
+  }
+  .perfect-decor {
+    .wrapper-perfect-decor {
+      .perfect-decor_img {
+        left: 67px;
+        top: 337px;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  body {
+    min-width: 420px;
+  }
+  .about-company {
+    .wrapper-about-company {
+      gap: 35px;
+      margin: 0 30px;
+      .wrapper-about_wrapper-title {
+        justify-content: flex-end;
+        .about-company_title {
+          font-weight: 900;
+        }
+
+        .wrapper-about_lamp__tablet {
+          display: none;
+        }
+        .wrapper-about_lamp__phone {
+          display: block;
+          position: absolute;
+          z-index: -1;
+          left: 50px;
+          bottom: -15px;
+          height: 109%;
+        }
+      }
+    }
+  }
+  .catalog-preview {
+    .catalog-preview_chair {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+  .advantages {
+    .advantages-wrapper {
+      margin: 40px 30px;
+    }
+  }
+  .perfect-decor {
+    height: 82vh;
+    .wrapper-perfect-decor {
+      margin: 0 30px;
+      .perfect-decor_img {
+        width: 111%;
+        left: -16px;
+        top: auto;
+        bottom: -240px;
+      }
+      .perfect-decor_text {
+        margin: 40px 0;
+      }
+    }
+  }
+  .materials {
+    .materials-wrapper {
+      margin: 50px 25px;
+      padding: 25px;
+      .materials_bg__first {
+        height: 90px;
+      }
+      .materials_bg__second {
+        height: 160px;
+        bottom: -72px;
+      }
+    }
+  }
+  .catalog-preview-second {
+    .catalog-preview-second_chair {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+  .catalog {
+    margin: 0 30px;
+    .wrapper-catalog {
+      padding: 25px 25px;
+      .catalog_list {
+        .catalog_item {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .customer-reviews {
+    .customer-reviews-wrapper {
+      .customer-reviews_btn {
+        align-self: center;
+      }
+    }
+  }
+  .customer-reviews {
+    .customer-reviews-wrapper {
+      margin: 40px 30px 0 30px;
+    }
+  }
+  .footer-main {
+    .footer-main_list {
+      margin: 0 30px;
     }
   }
 }

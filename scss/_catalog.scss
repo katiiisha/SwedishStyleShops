@@ -428,21 +428,96 @@
 .links-shops {
   .wrapper-links-shops {
     display: flex;
-    flex-direction: column;
-    height: 200px;
+    // flex-direction: column;
+
     flex-wrap: wrap;
     align-items: center;
     gap: 22px 51px;
     width: max-content;
-    margin: auto;
+    margin: 50px auto;
     .links-shops_link {
       display: flex;
       text-decoration: none;
+      img {
+        height: 150px;
+      }
     }
   }
 }
 @media (max-width: 1200px) {
   .catalog-page {
     gap: 55px;
+  }
+  .catalog-menu {
+    margin: 50px;
+    .all-catalog {
+      gap: 50px;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .catalog-menu {
+    margin: 30px;
+    .catalog-menu_btn {
+      width: 250px;
+      height: 60px;
+      font-size: 22px;
+    }
+  }
+  .links-shops {
+    .wrapper-links-shops {
+      gap: 15px 30px;
+      .links-shops_link {
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .catalog-menu {
+    .all-catalog {
+      .wrapper-card-product {
+        .card-product {
+          width: 200px;
+          height: 180px;
+          padding: 25px;
+        }
+      }
+    }
+    .tabs-nav {
+      .tabs-list {
+        .tabs-list_link {
+          font-size: 16px;
+          padding: 10px 15px 10px 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .catalog-menu {
+    .all-catalog {
+      gap: 50px 30px;
+    }
+    .combination-with-chairs {
+      margin: 50px 0 30px 0;
+    }
+    .catalog-menu_btn {
+      width: 220px;
+      height: 50px;
+    }
+  }
+  .links-shops {
+    .wrapper-links-shops {
+      gap: 20px;
+      .links-shops_link {
+        img {
+          height: 80px;
+        }
+      }
+    }
   }
 }

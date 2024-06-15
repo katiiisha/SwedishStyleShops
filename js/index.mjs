@@ -19,6 +19,21 @@ const swiper = new Swiper('.swiper', {
   centerSlide: true,
   fade: true,
   spaceBetween: 25,
+  breakpoints: {
+    220: {
+      slidesPerView: 1,
+    },
+    420: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 640px
+    600: {
+      slidesPerView: 2,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+  },
 });
 const catalogSwiper = new Swiper('.my-swiper', {
   // loop: true,
@@ -213,57 +228,6 @@ class Cart {
   }
 }
 
-class Catalog {
-  constructor(catalog) {
-    this.catalog = catalog;
-  }
-  changeAssortment(link) {
-    let cardProductAll = [
-      ...this.catalog.querySelectorAll('.wrapper-card-product'),
-    ];
-    let cardProductChair = [...this.catalog.querySelectorAll('.product-chair')];
-    let cardProductTable = [...this.catalog.querySelectorAll('.product-table')];
-    link.classList.add('tabs-list_link__active');
-    if (link.classList.contains('tabs-list_link__chair')) {
-      cardProductChair.forEach((i) => {
-        i.classList.add('wrapper-card-product__active');
-      });
-      cardProductTable.forEach((i) =>
-        i.classList.remove('wrapper-card-product__active')
-      );
-    }
-    if (link.classList.contains('tabs-list_link__table')) {
-      cardProductTable.forEach((i) => {
-        i.classList.add('wrapper-card-product__active');
-      });
-      cardProductChair.forEach((i) => {
-        i.classList.remove('wrapper-card-product__active');
-      });
-    }
-    if (link.classList.contains('tabs-list_link__all')) {
-      cardProductAll.forEach((i) => {
-        i.classList.add('wrapper-card-product__active');
-      });
-    }
-  }
-  changeActiveLink() {
-    let tabsMenu = [...this.catalog.querySelectorAll('.tabs-list_link')];
-
-    tabsMenu.forEach((tab) => {
-      tab.addEventListener('click', (e) => {
-        e.preventDefault();
-        tabsMenu.forEach((i) => {
-          if (i.classList.contains('tabs-list_link__active')) {
-            i.classList.remove('tabs-list_link__active');
-          }
-        });
-        let link = e.target.closest('a');
-        this.changeAssortment(link);
-      });
-    });
-  }
-}
-
 class CardModal {
   constructor(card, modal, cards) {
     this.card = [...document.querySelectorAll(`.${card}`)];
@@ -339,17 +303,36 @@ class CardModal {
     });
   }
 }
-
+class burgerMenu {
+  constructor(menu, activeClass) {
+    this.menu = menu;
+    this.activeClass = activeClass;
+  }
+  close() {
+    this.menu.classList.remove(`${this.activeClass}`);
+    bodyScrollLock.enableBodyScroll(this.menu);
+  }
+  open() {
+    this.menu.classList.add(`${this.activeClass}`);
+    bodyScrollLock.disableBodyScroll(this.menu);
+  }
+}
+const modalBurgerMenu = new burgerMenu(
+  document.querySelector('.wrapper-menu-burger'),
+  'wrapper-menu-burger__active'
+);
+document.querySelector('.menu_item__menu').addEventListener('click', () => {
+  modalBurgerMenu.open();
+});
+document.querySelector('.menu-burger-btn').addEventListener('click', () => {
+  modalBurgerMenu.close();
+});
 const card = new CardModal(
   'wrapper-card-product',
   'modal-card-product ',
   catalogCard
 );
 card.openModal();
-
-const catalogs = document.querySelector('.catalog-menu ');
-const catalog = new Catalog(catalogs);
-catalog.changeActiveLink();
 
 const cartLink = document.querySelector('.menu_item__cart');
 const modalCart = document.querySelector('.modal-shopping-cart');
@@ -358,11 +341,13 @@ const cartTexst = new Cart(cartLink, modalCart, closeModalCart, catalogCard);
 cartTexst.openCart();
 cartTexst.closeCart();
 
-document.querySelector('.desc-item-cart').addEventListener('click', (e) => {
-  let product = e.target
-    .closest('.desc-list')
-    .querySelector('.desc-item__title')
-    .textContent.toLowerCase();
+if (document.querySelector('.desc-item-cart')) {
+  document.querySelector('.desc-item-cart').addEventListener('click', (e) => {
+    let product = e.target
+      .closest('.desc-list')
+      .querySelector('.desc-item__title')
+      .textContent.toLowerCase();
 
-  cartTexst.addProduct(product);
-});
+    cartTexst.addProduct(product);
+  });
+}

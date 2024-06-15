@@ -1,0 +1,15 @@
+<svg width="200.000000" height="200.000000" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip100_62">
+			<rect id="иконкиМаркетовЦвет-26 1" rx="10.000000" width="200.000000" height="200.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="иконкиМаркетовЦвет-26 1" rx="10.000000" width="200.000000" height="200.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip100_62)">
+		<path id="Vector" d="M-0.71 0L200.11 0L200.11 200L-0.71 200L-0.71 0Z" fill="#FFDE21" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector" d="M-0.71 184.96L54.7 109.81L49.05 154.74L83.23 165.81L123.79 100C123.79 100 115.29 137.23 145.64 147.52C176 157.81 200 123.15 200 123.15L200 72.1C200 72.1 170.58 118.58 160.58 113.36C150.58 108.14 154.2 85.17 165.08 47.1L126.85 33.38L82.08 110.59L86.61 68.31L54.26 55.72L-0.71 128.84L-0.71 184.96Z" fill="#21221F" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
