@@ -444,6 +444,10 @@
   letter-spacing: 5%;
   cursor: pointer;
 }
+.main-header .wrapper-slogan .slogan_btn .slogan_btn_link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
 
 @media (max-width: 1200px) {
   .main-header {
