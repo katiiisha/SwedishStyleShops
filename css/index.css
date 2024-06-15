@@ -503,6 +503,13 @@
     font-size: clamp(38px, 10vw, 50px);
   }
 }
+@media (max-width: 500px) {
+  .main-header {
+    width: 180px;
+    height: 41px;
+    font-size: 16px;
+  }
+}
 .welcome-page {
   background-image: url(../img/mainPage/bg-WelcomePage.svg);
 }
@@ -1303,10 +1310,21 @@
     top: 337px;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   body {
-    min-width: 420px;
+    min-width: 500px;
   }
+  .main-header {
+    width: 100%;
+    height: 100vh;
+  }
+  .main-header .wrapper-slogan .slogan_btn {
+    width: 183px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 420px) {
   .about-company .wrapper-about-company {
     gap: 35px;
     margin: 0 30px;
@@ -1866,6 +1884,9 @@
   }
 }
 @media (max-width: 500px) {
+  body {
+    min-width: 420px;
+  }
   .catalog-menu .all-catalog {
     gap: 50px 30px;
   }
@@ -1875,6 +1896,10 @@
   .catalog-menu .catalog-menu_btn {
     width: 220px;
     height: 50px;
+  }
+  .catalog-menu .tabs-nav .tabs-list .tabs-list_link {
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
   }
   .links-shops .wrapper-links-shops {
     gap: 20px;

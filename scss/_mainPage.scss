@@ -876,10 +876,23 @@
     }
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   body {
-    min-width: 420px;
+    min-width: 500px;
   }
+  .main-header {
+    width: 100%;
+    height: 100vh;
+    .wrapper-slogan {
+      .slogan_btn {
+        width: 183px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
   .about-company {
     .wrapper-about-company {
       gap: 35px;

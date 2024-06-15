@@ -498,6 +498,9 @@
   }
 }
 @media (max-width: 500px) {
+  body {
+    min-width: 420px;
+  }
   .catalog-menu {
     .all-catalog {
       gap: 50px 30px;
@@ -508,6 +511,14 @@
     .catalog-menu_btn {
       width: 220px;
       height: 50px;
+    }
+    .tabs-nav {
+      .tabs-list {
+        .tabs-list_link {
+          font-size: 14px;
+          padding: 10px 10px 10px 10px;
+        }
+      }
     }
   }
   .links-shops {
