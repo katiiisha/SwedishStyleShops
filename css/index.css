@@ -2171,6 +2171,9 @@
   body {
     min-width: 420px;
   }
+  .catalog-page .wrapper-slogan {
+    margin-top: 30%;
+  }
   .mod-card-product .wrapper-mod-card-product .slide-prev .inner-slide-prev .product-desc .product-img {
     gap: 0;
   }
@@ -2285,6 +2288,9 @@
   }
 }
 @media (max-width: 450px) {
+  .contact-page .wrapper-slogan {
+    margin-top: 39%;
+  }
   .contact .wrapper-contact {
     padding: 0 30px 15px 30px;
   }
@@ -2453,6 +2459,9 @@
   }
 }
 @media (max-width: 470px) {
+  .main-header.faq-page .wrapper-slogan {
+    margin-top: 35%;
+  }
   .faq .wrapper-faq .inner-faq .faq-list .faq-list_question {
     background-size: 91%;
   }

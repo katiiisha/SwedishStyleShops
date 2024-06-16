@@ -363,6 +363,14 @@
   }
 }
 @media (max-width: 470px) {
+  .main-header {
+    &.faq-page {
+      .wrapper-slogan {
+        margin-top: 35%;
+      }
+    }
+  }
+
   .faq {
     .wrapper-faq {
       .inner-faq {
