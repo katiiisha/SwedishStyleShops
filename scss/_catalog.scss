@@ -168,7 +168,7 @@
           }
         }
         .product-desc {
-          padding-top: 100px;
+          padding-top: 50px;
           display: flex;
           flex-direction: column;
           align-items: flex-end;
@@ -362,6 +362,9 @@
         background-image: url(../img/catalogPage/cardProduct/bg-slide.png);
         background-size: contain;
         height: 100%;
+        .infa-title {
+          display: none;
+        }
         .list-infa {
           position: relative;
           z-index: 1;
@@ -461,9 +464,14 @@
           background-color: #fff;
           display: flex;
           .product-desc {
+            width: 100%;
             gap: 0;
             align-items: flex-start;
             background-color: #fff;
+            .product-img {
+              width: 100%;
+              justify-content: center;
+            }
             .desc-list {
               .desc-item {
                 flex-direction: row-reverse;
@@ -507,18 +515,60 @@
           }
         }
       }
+      .slide-size {
+        .chair-size {
+          justify-content: center;
+          .chair-size_title {
+            display: none;
+          }
+        }
+      }
       .slide-infa {
-        margin-top: 42px;
         .inner-infa {
           height: auto;
           background-image: none;
+
           .list-infa {
+            gap: 15px;
             padding: 20px;
             border-radius: 15px;
             background-color: #ffefa6;
             margin: 0;
             gap: 10px;
             .item-infa {
+              gap: 0;
+              .infa-title {
+                margin-bottom: 22px;
+                @include fontDesigner(
+                  rgb(0, 0, 0),
+                  'Oswald',
+                  36px,
+                  400,
+                  36px,
+                  5px
+                );
+                display: block;
+              }
+              .item-infa_title {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                @include fontDesigner(
+                  rgb(0, 0, 0),
+                  'Arial',
+                  18px,
+                  400,
+                  18px,
+                  0
+                );
+                .item-infa_text {
+                  font-weight: 600;
+                  font-size: 18px;
+                }
+              }
               .item-infa_sqr {
                 display: none;
               }
@@ -591,6 +641,42 @@
 @media (max-width: 500px) {
   body {
     min-width: 420px;
+  }
+  .mod-card-product {
+    .wrapper-mod-card-product {
+      .slide-prev {
+        .inner-slide-prev {
+          .product-desc {
+            .product-img {
+              gap: 0;
+              img {
+                width: 160px;
+                height: 160px;
+              }
+            }
+          }
+        }
+      }
+      .slide-size {
+        .chair-size {
+          .chair-size-img {
+            width: 100%;
+          }
+        }
+      }
+      .slide-infa {
+        .inner-infa {
+          .list-infa {
+            .item-infa {
+              .item-infa_title {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .catalog-menu {
     .all-catalog {

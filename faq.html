@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
     <title>FAQ: часто задоваемые вопросы</title>
-    <script type="module" src="js/index.mjs "></script>
-    <script src=node_modules/body-scroll-lock/lib/bodyScrollLock.js"></script>
+    <script  src="js/index.js "></script>
+
     
   </head>
   <body>
@@ -311,9 +311,86 @@
         </div>
       </div>
     </section>
-    <section class="customer-reviews-faq">
+    <section class="customer-reviews">
+      <div class="customer-reviews-wrapper">
+        <h2 class="customer-reviews_title">Отзывы наших покупателей</h2>
+        <ul class="customer-reviews_list">
+          <li class="customer-reviews_item">
+            <div class="customer-reviews_ava customer-reviews_ava">
+              <img src="img/mainPage/customerReviews/ava1.png" alt="" />
+            </div>
+            <p class="customer-reviews_name">Алина</p>
+            <br />
+            <p class="customer-reviews_text">
+              Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+              текст отзыва.
+            </p>
+          </li>
+          <li class="customer-reviews_item">
+            <div class="customer-reviews_ava ustomer-reviews_ava">
+              <img src="img/mainPage/customerReviews/ava2.png" alt="" />
+            </div>
+            <p class="customer-reviews_name">Рома</p>
+            <br />
+            <p class="customer-reviews_text">
+              Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+              текст отзыва.
+            </p>
+          </li>
+          <li class="customer-reviews_item">
+            <div class="customer-reviews_ava">
+              <img src="img/mainPage/customerReviews/ava3.png" alt="" />
+            </div>
+            <p class="customer-reviews_name">Лилия</p>
+            <br />
+            <p class="customer-reviews_text">
+              Текст отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+              текст отзыва.
+            </p>
+          </li>
+        </ul>
+           <div class="feedback">
+        <button class="feedback-btn">Оставить отзыв</button>
+        <div class="modal-feedback">
+          <form action="" class="feedback-form">
+            <button class="feedback-form_close">
+              <img src="img/fqaPage/closeBtnwhite.svg" alt="" />
+            </button>
+            <h3 class="feedback-title">Форма обратной связи</h3>
+            <label class="feedback-input feedback-name">
+              ФИО
+              <input type="text" placeholder="Ваши Фамилия, Имя, Отчество" />
+            </label>
+            <label class="feedback-input feedback-email">
+              Электронная почта
+              <input type="email" name="email" placeholder="Ваш e-mail" />
+            </label>
+            <label class="feedback-input feedback-search">
+              Приобретенный товар
+              <input type="search" placeholder="Введите название товара" />
+            </label>
+            <label class="feedback-input feedback-text">
+              Ваш комментарий
+              <textarea
+                placeholder="Что вы думаете по поводу нашего товара?"
+                class="feedback-text"
+              >
+              </textarea>
+            </label>
+
+            <input type="submit" value="Отправить" class="feedback-submit" />
+          </form>
+        </div>
+        <div class="message-feedback">
+          <b>Спасибо за ваш отзыв!</b>
+          Как только он пройдет проверку, мы сразу же его выложим.
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- <section class="customer-reviews-faq">
       <div class="swiper">
-        <!-- <div class="parallax-bg" data-swiper-parallax="-23%"></div> -->
+
         <div class="swiper-wrapper my-swiper-wrapper">
           <div class="swiper-slide">
             <div class="title"></div>
@@ -396,7 +473,7 @@
           Как только он пройдет проверку, мы сразу же его выложим.
         </div>
       </div>
-    </section>
+    </section> -->
     <footer class="footer-main">
       <div class="footer-main-bg"></div>
       <ul class="footer-main_list">

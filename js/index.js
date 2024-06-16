@@ -414,11 +414,9 @@ class burgerMenu {
   }
   close() {
     this.menu.classList.remove(`${this.activeClass}`);
-    bodyScrollLock.enableBodyScroll(this.menu);
   }
   open() {
     this.menu.classList.add(`${this.activeClass}`);
-    bodyScrollLock.disableBodyScroll(this.menu);
   }
 }
 const modalBurgerMenu = new burgerMenu(
