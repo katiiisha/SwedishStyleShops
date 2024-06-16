@@ -352,13 +352,13 @@
           background-color: rgb(41, 69, 100, 0.5);
         }
         .customer-reviews_name {
-          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 400, 40px, 0);
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 20px, 400, 30px, 0);
           display: inline;
           margin: 0;
           padding-left: 10px;
         }
         .customer-reviews_text {
-          @include fontDesigner(rgb(53, 53, 53), 'Arial', 16px, 400, 40px, 0);
+          @include fontDesigner(rgb(53, 53, 53), 'Arial', 16px, 400, 24px, 0);
           display: inline;
           text-align: justify;
         }

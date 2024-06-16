@@ -1,5 +1,11 @@
-.faq-page {
-  background-image: url(../img/fqaPage/fqaBg.svg);
+.main-header {
+  &.faq-page {
+    background-image: url(../img/fqaPage/fqaBg.svg);
+
+    .wrapper-slogan {
+      margin-top: 16%;
+    }
+  }
 }
 
 .faq {

@@ -901,7 +901,7 @@
   font-family: "Arial";
   font-size: 20px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 30px;
   letter-spacing: 0;
   display: inline;
   margin: 0;
@@ -912,7 +912,7 @@
   font-family: "Arial";
   font-size: 16px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 24px;
   letter-spacing: 0;
   display: inline;
   text-align: justify;
@@ -1556,6 +1556,9 @@
 }
 .catalog-page {
   background-image: url(../img/catalogPage/catalogBg.svg);
+}
+.catalog-page .wrapper-slogan {
+  margin-top: 10%;
 }
 
 .catalog-menu {
@@ -2216,6 +2219,9 @@
 .contact-page {
   background-image: url(../img/contactPage/contactPage.png);
 }
+.contact-page .wrapper-slogan {
+  margin-top: 13%;
+}
 
 .contact .wrapper-contact {
   padding: 0 100px 25px 100px;
@@ -2292,8 +2298,11 @@
     line-height: 14px;
   }
 }
-.faq-page {
+.main-header.faq-page {
   background-image: url(../img/fqaPage/fqaBg.svg);
+}
+.main-header.faq-page .wrapper-slogan {
+  margin-top: 16%;
 }
 
 .faq .wrapper-faq {
