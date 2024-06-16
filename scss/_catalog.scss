@@ -708,4 +708,22 @@
       }
     }
   }
+  .customer-reviews {
+    .feedback {
+      .modal-feedback {
+        .feedback-form {
+          width: 100%;
+          .feedback-input {
+            textarea {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .message-feedback {
+        left: 15%;
+        width: 83%;
+      }
+    }
+  }
 }

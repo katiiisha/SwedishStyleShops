@@ -82,177 +82,177 @@
     }
   }
 }
-.customer-reviews-faq {
-  padding: 10px;
-  .swiper {
-    padding: 50px;
-    .my-swiper-wrapper {
-      // gap: 24px;
-      // width: 85%;
+// .customer-reviews-faq {
+//   padding: 10px;
+//   .swiper {
+//     padding: 50px;
+//     .my-swiper-wrapper {
+//       // gap: 24px;
+//       // width: 85%;
 
-      overflow: hidden;
-      .swiper-slide {
-        width: 300px;
-        // height: 300px;
-        padding: 24px;
-        border-radius: 5px;
-        background: rgb(255, 239, 166);
-        .title {
-          width: 97px;
-          height: 97px;
-          border-radius: 50%;
-          margin: auto;
-          background-color: rgb(41, 69, 100, 0.5);
-        }
-        .subtitle {
-          margin: 0;
-          @include fontDesigner(
-            rgb(41, 69, 100),
-            'Oswald',
-            45px,
-            400,
-            55px,
-            2px
-          );
-        }
-        .text {
-          @include fontDesigner(rgb(53, 53, 53), 'Arial', 16px, 400, 40px, 0);
-          // display: inline;
-          text-align: justify;
-        }
-      }
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: rgb(134, 153, 195);
-    }
-  }
-  .feedback {
-    display: flex;
-    flex-direction: column;
-    .feedback-btn {
-      cursor: pointer;
-      margin-right: 100px;
-      align-self: flex-end;
-      color: rgb(255, 255, 255);
-      border-radius: 10px;
-      background: rgb(41, 69, 100);
-      border: none;
-      width: 310px;
-      height: 60px;
-      @include fontDesigner(rgb(255, 255, 255), 'Arial', 24px, 400, 40px, 0);
-    }
-    .modal-feedback {
-      display: none;
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgb(255, 255, 255, 0.2);
+//       overflow: hidden;
+//       .swiper-slide {
+//         width: 300px;
+//         // height: 300px;
+//         padding: 24px;
+//         border-radius: 5px;
+//         background: rgb(255, 239, 166);
+//         .title {
+//           width: 97px;
+//           height: 97px;
+//           border-radius: 50%;
+//           margin: auto;
+//           background-color: rgb(41, 69, 100, 0.5);
+//         }
+//         .subtitle {
+//           margin: 0;
+//           @include fontDesigner(
+//             rgb(41, 69, 100),
+//             'Oswald',
+//             45px,
+//             400,
+//             55px,
+//             2px
+//           );
+//         }
+//         .text {
+//           @include fontDesigner(rgb(53, 53, 53), 'Arial', 16px, 400, 40px, 0);
+//           // display: inline;
+//           text-align: justify;
+//         }
+//       }
+//     }
+//     .swiper-button-next,
+//     .swiper-button-prev {
+//       color: rgb(134, 153, 195);
+//     }
+//   }
+//   .feedback {
+//     display: flex;
+//     flex-direction: column;
+//     .feedback-btn {
+//       cursor: pointer;
+//       margin-right: 100px;
+//       align-self: flex-end;
+//       color: rgb(255, 255, 255);
+//       border-radius: 10px;
+//       background: rgb(41, 69, 100);
+//       border: none;
+//       width: 310px;
+//       height: 60px;
+//       @include fontDesigner(rgb(255, 255, 255), 'Arial', 24px, 400, 40px, 0);
+//     }
+//     .modal-feedback {
+//       display: none;
+//       position: absolute;
+//       width: 100vw;
+//       height: 100vh;
+//       background-color: rgb(255, 255, 255, 0.2);
 
-      .feedback-form {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding: 30px 24px;
-        width: 450px;
-        position: relative;
-        border-radius: 10px;
-        background: rgb(134, 153, 195);
-        gap: 24px;
-        .feedback-form_close {
-          position: absolute;
-          padding: 0;
-          border: none;
-          background: transparent;
-          right: 24px;
-        }
-        .feedback-title {
-          @include fontDesigner(
-            rgb(255, 255, 255),
-            'Oswald',
-            24px,
-            400,
-            40px,
-            0
-          );
-          text-align: center;
-          margin: 0;
-        }
-        .feedback-input {
-          @include fontDesigner(
-            rgb(255, 255, 255),
-            'Arial',
-            20px,
-            400,
-            40px,
-            0
-          );
-          display: flex;
-          flex-direction: column;
-          input {
-            @include fontDesigner(
-              rgb(255, 255, 255),
-              'Arial',
-              16px,
-              400,
-              40px,
-              0
-            );
-            height: 41px;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: rgb(134, 153, 195);
-            &::placeholder {
-              color: rgb(217, 217, 217);
-            }
-          }
-          textarea {
-            width: 404px;
-            height: 173px;
-            border: 1px solid rgb(255, 255, 255);
-            background-color: rgb(134, 153, 195);
-            @include fontDesigner(
-              rgb(255, 255, 255),
-              'Arial',
-              16px,
-              400,
-              40px,
-              0
-            );
-          }
-        }
-        .feedback-submit {
-          @include fontDesigner(rgb(53, 53, 53), 'Oswald', 24px, 400, 40px, 0);
-          border-radius: 3px;
-          background: rgb(255, 239, 166);
-          width: 140px;
-          height: 42px;
-          border: none;
-          margin: auto;
-        }
-      }
-    }
-    .modal-feedback__active {
-      display: flex;
-    }
-    .message-feedback {
-      position: absolute;
-      left: 35%;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border-radius: 10px;
-      width: 350px;
-      height: 100px;
-      padding: 10px;
-      background-color: #8699c3;
-      @include fontDesigner(rgb(255, 255, 255), 'Arial', 16px, 400, 20px, 0);
-    }
-    .message-feedback__active {
-      display: flex;
-    }
-  }
-}
+//       .feedback-form {
+//         display: flex;
+//         flex-direction: column;
+//         margin: auto;
+//         padding: 30px 24px;
+//         width: 450px;
+//         position: relative;
+//         border-radius: 10px;
+//         background: rgb(134, 153, 195);
+//         gap: 24px;
+//         .feedback-form_close {
+//           position: absolute;
+//           padding: 0;
+//           border: none;
+//           background: transparent;
+//           right: 24px;
+//         }
+//         .feedback-title {
+//           @include fontDesigner(
+//             rgb(255, 255, 255),
+//             'Oswald',
+//             24px,
+//             400,
+//             40px,
+//             0
+//           );
+//           text-align: center;
+//           margin: 0;
+//         }
+//         .feedback-input {
+//           @include fontDesigner(
+//             rgb(255, 255, 255),
+//             'Arial',
+//             20px,
+//             400,
+//             40px,
+//             0
+//           );
+//           display: flex;
+//           flex-direction: column;
+//           input {
+//             @include fontDesigner(
+//               rgb(255, 255, 255),
+//               'Arial',
+//               16px,
+//               400,
+//               40px,
+//               0
+//             );
+//             height: 41px;
+//             border: 1px solid rgb(255, 255, 255);
+//             background-color: rgb(134, 153, 195);
+//             &::placeholder {
+//               color: rgb(217, 217, 217);
+//             }
+//           }
+//           textarea {
+//             width: 404px;
+//             height: 173px;
+//             border: 1px solid rgb(255, 255, 255);
+//             background-color: rgb(134, 153, 195);
+//             @include fontDesigner(
+//               rgb(255, 255, 255),
+//               'Arial',
+//               16px,
+//               400,
+//               40px,
+//               0
+//             );
+//           }
+//         }
+//         .feedback-submit {
+//           @include fontDesigner(rgb(53, 53, 53), 'Oswald', 24px, 400, 40px, 0);
+//           border-radius: 3px;
+//           background: rgb(255, 239, 166);
+//           width: 140px;
+//           height: 42px;
+//           border: none;
+//           margin: auto;
+//         }
+//       }
+//     }
+//     .modal-feedback__active {
+//       display: flex;
+//     }
+//     .message-feedback {
+//       position: absolute;
+//       left: 35%;
+//       display: none;
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//       border-radius: 10px;
+//       width: 350px;
+//       height: 100px;
+//       padding: 10px;
+//       background-color: #8699c3;
+//       @include fontDesigner(rgb(255, 255, 255), 'Arial', 16px, 400, 20px, 0);
+//     }
+//     .message-feedback__active {
+//       display: flex;
+//     }
+//   }
+// }
 @media (max-width: 1200px) {
   .faq {
     .wrapper-faq {

@@ -2193,6 +2193,16 @@
   .links-shops .wrapper-links-shops .links-shops_link img {
     height: 80px;
   }
+  .customer-reviews .feedback .modal-feedback .feedback-form {
+    width: 100%;
+  }
+  .customer-reviews .feedback .modal-feedback .feedback-form .feedback-input textarea {
+    width: 100%;
+  }
+  .customer-reviews .feedback .message-feedback {
+    left: 15%;
+    width: 83%;
+  }
 }
 .contact-page {
   background-image: url(../img/contactPage/contactPage.png);
@@ -2352,185 +2362,6 @@
 }
 .faq .wrapper-faq .wrapper-link-email .link-email .link-email_accent {
   font-weight: 700;
-}
-
-.customer-reviews-faq {
-  padding: 10px;
-}
-.customer-reviews-faq .swiper {
-  padding: 50px;
-}
-.customer-reviews-faq .swiper .my-swiper-wrapper {
-  overflow: hidden;
-}
-.customer-reviews-faq .swiper .my-swiper-wrapper .swiper-slide {
-  width: 300px;
-  padding: 24px;
-  border-radius: 5px;
-  background: rgb(255, 239, 166);
-}
-.customer-reviews-faq .swiper .my-swiper-wrapper .swiper-slide .title {
-  width: 97px;
-  height: 97px;
-  border-radius: 50%;
-  margin: auto;
-  background-color: rgba(41, 69, 100, 0.5);
-}
-.customer-reviews-faq .swiper .my-swiper-wrapper .swiper-slide .subtitle {
-  margin: 0;
-  color: rgb(41, 69, 100);
-  font-family: "Oswald";
-  font-size: 45px;
-  font-weight: 400;
-  line-height: 55px;
-  letter-spacing: 2px;
-}
-.customer-reviews-faq .swiper .my-swiper-wrapper .swiper-slide .text {
-  color: rgb(53, 53, 53);
-  font-family: "Arial";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-  text-align: justify;
-}
-.customer-reviews-faq .swiper .swiper-button-next,
-.customer-reviews-faq .swiper .swiper-button-prev {
-  color: rgb(134, 153, 195);
-}
-.customer-reviews-faq .feedback {
-  display: flex;
-  flex-direction: column;
-}
-.customer-reviews-faq .feedback .feedback-btn {
-  cursor: pointer;
-  margin-right: 100px;
-  align-self: flex-end;
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  background: rgb(41, 69, 100);
-  border: none;
-  width: 310px;
-  height: 60px;
-  color: rgb(255, 255, 255);
-  font-family: "Arial";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-}
-.customer-reviews-faq .feedback .modal-feedback {
-  display: none;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  padding: 30px 24px;
-  width: 450px;
-  position: relative;
-  border-radius: 10px;
-  background: rgb(134, 153, 195);
-  gap: 24px;
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-form_close {
-  position: absolute;
-  padding: 0;
-  border: none;
-  background: transparent;
-  right: 24px;
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-title {
-  color: rgb(255, 255, 255);
-  font-family: "Oswald";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-  text-align: center;
-  margin: 0;
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-input {
-  color: rgb(255, 255, 255);
-  font-family: "Arial";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-  display: flex;
-  flex-direction: column;
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-input input {
-  color: rgb(255, 255, 255);
-  font-family: "Arial";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-  height: 41px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(134, 153, 195);
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-input input::-moz-placeholder {
-  color: rgb(217, 217, 217);
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-input input::placeholder {
-  color: rgb(217, 217, 217);
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-input textarea {
-  width: 404px;
-  height: 173px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(134, 153, 195);
-  color: rgb(255, 255, 255);
-  font-family: "Arial";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-}
-.customer-reviews-faq .feedback .modal-feedback .feedback-form .feedback-submit {
-  color: rgb(53, 53, 53);
-  font-family: "Oswald";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0;
-  border-radius: 3px;
-  background: rgb(255, 239, 166);
-  width: 140px;
-  height: 42px;
-  border: none;
-  margin: auto;
-}
-.customer-reviews-faq .feedback .modal-feedback__active {
-  display: flex;
-}
-.customer-reviews-faq .feedback .message-feedback {
-  position: absolute;
-  left: 35%;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
-  width: 350px;
-  height: 100px;
-  padding: 10px;
-  background-color: #8699c3;
-  color: rgb(255, 255, 255);
-  font-family: "Arial";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0;
-}
-.customer-reviews-faq .feedback .message-feedback__active {
-  display: flex;
 }
 
 @media (max-width: 1200px) {
