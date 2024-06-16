@@ -88,7 +88,7 @@
       <div class="wrapper-shopping-cart">
         <div class="shopping-cart_header">
           <h3 class="shopping-cart__title">корзина</h3>
-          <button class="shopping-cart_close"></button>
+          <button class="shopping-cart_close cart_close"></button>
         </div>
         <div class="wrapper-list-buy">
           <ul class="list-buy">
@@ -168,7 +168,7 @@
         <p class="shopping-cart_price shopping-cart_price__accent">
           Сумма <span class="list-buy_price__text summa-cart"> 0 P</span>
         </p>
-        <button class="shopping-cart_btn">Оформить заказ</button>
+        <button class="shopping-cart_btn cart_close">Оформить заказ</button>
       </div>
     </section>
     <section class="mod-card-product">
@@ -591,7 +591,53 @@
           Комбинация стол со стульями
         </h3>
       </div>
-      <button class="catalog-menu_btn">Оставить отзыв</button>
+    </section>
+    <section class="customer-reviews">
+      <div class="customer-reviews-wrapper">
+        <div class="feedback">
+          <button class="feedback-btn">Оставить отзыв</button>
+          <div class="modal-feedback">
+          <form action="" class="feedback-form">
+            <button class="feedback-form_close">
+              <img src="img/fqaPage/closeBtnwhite.svg" alt="" />
+            </button>
+            <h3 class="feedback-title">Форма обратной связи</h3>
+            <label class="feedback-input feedback-name">
+              ФИО
+              <input type="text" placeholder="Ваши Фамилия, Имя, Отчество" />
+            </label>
+            <label class="feedback-input feedback-email">
+              Электронная почта
+              <input type="email" name="email" placeholder="Ваш e-mail" />
+            </label>
+            <label class="feedback-input feedback-search">
+              Приобретенный товар
+              <input type="search" placeholder="Введите название товара" />
+            </label>
+            <label class="feedback-input feedback-text">
+              Ваш комментарий
+              <textarea
+                placeholder="Что вы думаете по поводу нашего товара?"
+                class="feedback-text"
+              >
+              </textarea>
+            </label>
+
+            <input type="submit" value="Отправить" class="feedback-submit" />
+          </form>
+          </div>
+          <div class="message-feedback">
+         
+         
+               <b>Спасибо за ваш отзыв!</b>
+          Как только он пройдет проверку, мы сразу же его выложим.
+           
+           
+          
+          
+        </div>
+      </div>
+      </div>
     </section>
     <section class="links-shops">
       <div class="wrapper-links-shops">

@@ -513,6 +513,9 @@
     height: 41px;
     font-size: 16px;
   }
+  .main-header .wrapper-slogan {
+    margin-top: 130px;
+  }
 }
 .welcome-page {
   background-image: url(../img/mainPage/bg-WelcomePage.svg);
@@ -2114,6 +2117,12 @@
   }
   .mod-card-product .wrapper-mod-card-product .slide-infa .inner-infa .list-infa::after {
     display: none;
+  }
+  .catalog-menu {
+    margin: 0;
+  }
+  .catalog-menu .combination-with-chairs {
+    margin: 0;
   }
 }
 @media (max-width: 1200px) {

@@ -146,8 +146,10 @@ class Cart {
   }
 
   closeCart() {
-    this.close.addEventListener('click', () => {
-      modalCart.classList.remove('modal-shopping-cart__active');
+    this.close.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modalCart.classList.remove('modal-shopping-cart__active');
+      });
     });
   }
   createCard(card) {
@@ -392,7 +394,7 @@ card.openModal();
 const cartLink = document.querySelectorAll('.menu_item__cart');
 const modalCart = document.querySelector('.modal-shopping-cart');
 console.log(modalCart);
-const closeModalCart = modalCart.querySelector('.shopping-cart_close');
+const closeModalCart = [...modalCart.querySelectorAll('.cart_close')];
 const cartTexst = new Cart(cartLink, modalCart, closeModalCart, catalogCard);
 cartTexst.openCart();
 cartTexst.closeCart();
